@@ -1,15 +1,16 @@
 <?php
 
 /*
-* Plugin Name: noBorder.tech payment gateway for Woocommerce
+* Plugin Name: noBorder.tech crypto payment gateway for Woocommerce
+* Description: <a href="https://noborder.tech">noBorder.tech</a> crypto payment gateway for Woocommerce.
+* Version: 1.1
 * Author: noBorder.tech
-* Description: <a href="https://noborder.tech">noBorder.tech</a> secure payment gateway for Woocommerce.
-* Version: 2.2.3
-* Author URI: https://noborder.tech
-* Author Email: info@noborder.tech
-* Text Domain: woo-noborder-gateway
-* WC requires at least: 3.0
-* WC tested up to: 6.1
+* Author URI: https://noBorder.tech
+* Author Email: info@noBorder.tech
+* Text Domain: noBorder_woo_payment_plugin
+* Tested version up to: 6.1
+* copyright (C) 2020 noBorder
+* license http://www.gnu.org/licenses/gpl-3.0.html GPLv3 or later
 */
 
 if (!defined('ABSPATH')) {
