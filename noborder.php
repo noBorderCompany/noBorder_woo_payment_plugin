@@ -1,12 +1,12 @@
 <?php
 
 /*
-* Plugin Name: noBorder.tech crypto payment gateway for Woocommerce
-* Description: <a href="https://noborder.tech">noBorder.tech</a> crypto payment gateway for Woocommerce.
+* Plugin Name: noBorder.company crypto payment gateway for Woocommerce
+* Description: <a href="https://noborder.company">noBorder.company</a> crypto payment gateway for Woocommerce.
 * Version: 1.1
-* Author: noBorder.tech
-* Author URI: https://noBorder.tech
-* Author Email: info@noBorder.tech
+* Author: noBorder.company
+* Author URI: https://noBorder.company
+* Author Email: info@noBorder.company
 * Text Domain: noBorder_woo_payment_plugin
 * Tested version up to: 6.1
 * copyright (C) 2020 noBorder
@@ -43,10 +43,10 @@ function wc_gateway_noborder_init(){
             public function __construct() {
                 
 				$this->id = 'WC_noBorder';
-                $this->method_title = __('noBorder.tech', 'woo-noborder-gateway');
-                $this->method_description = __('Redirect customers to noBorder.tech to process their payments with crypto currencies.', 'woo-noborder-gateway');
+                $this->method_title = __('noBorder.company', 'woo-noborder-gateway');
+                $this->method_description = __('Redirect customers to noBorder.company to process their payments with crypto currencies.', 'woo-noborder-gateway');
                 $this->has_fields = FALSE;
-                $this->icon = apply_filters('WC_noBorder_logo', 'https://noborder.tech/file/image/gate/logo-icon.png');
+                $this->icon = apply_filters('WC_noBorder_logo', 'https://noborder.company/file/image/gate/logo-icon.png');
 
                 // Load the form fields.
                 $this->init_form_fields();
@@ -63,8 +63,8 @@ function wc_gateway_noborder_init(){
 
                 $this->order_status = $this->get_option('order_status');
 
-                $this->payment_endpoint = 'https://noborder.tech/action/ws/request_create';
-                $this->verify_endpoint = 'https://noborder.tech/action/ws/request_status';
+                $this->payment_endpoint = 'https://noborder.company/action/ws/request_create';
+                $this->verify_endpoint = 'https://noborder.company/action/ws/request_status';
 
                 $this->success_message = $this->get_option('success_message');
                 $this->failed_message = $this->get_option('failed_message');
@@ -96,7 +96,7 @@ function wc_gateway_noborder_init(){
                     'enabled' => array(
                         'title' => __('Enable/Disable', 'woo-noborder-gateway'),
                         'type' => 'checkbox',
-                        'label' => 'Enable noBorder.tech gateway',
+                        'label' => 'Enable noBorder.company gateway',
                         'description' => '',
                         'default' => 'yes',
                     ),
@@ -104,7 +104,7 @@ function wc_gateway_noborder_init(){
                         'title' => __('Title', 'woo-noborder-gateway'),
                         'type' => 'text',
                         'description' => __('This title will be shown when a customer is going to checkout.', 'woo-noborder-gateway'),
-                        'default' => __('noBorder.tech crypto payment gateway', 'woo-noborder-gateway'),
+                        'default' => __('noBorder.company crypto payment gateway', 'woo-noborder-gateway'),
                     ),
                     'description' => array(
                         'title' => __('Description', 'woo-noborder-gateway'),
@@ -120,13 +120,13 @@ function wc_gateway_noborder_init(){
                     'api_key' => array(
                         'title' => __('API Key', 'woo-noborder-gateway'),
                         'type' => 'text',
-                        'description' => __('You can create an API Key by going to <a href="https://noborder.tech/cryptosite" target="_blank">https://noborder.tech/cryptosite</a>', 'woo-noborder-gateway'),
+                        'description' => __('You can create an API Key by going to <a href="https://noborder.company/cryptosite" target="_blank">https://noborder.company/cryptosite</a>', 'woo-noborder-gateway'),
                         'default' => '',
                     ),
                     'pay_currency' => array(
                         'title' => __('Pay Currencies', 'woo-noborder-gateway'),
                         'type' => 'text',
-                        'description' => __('By default, customers can pay through all <a href="https://noborder.tech/cryptosite" target="_blank">active currencies</a> in the gate, but if you want to limit the customer to pay through one or more specific crypto currencies, you can declare the name of the crypto currencies through this variable. If you want to declare more than one currency, separate them with a dash ( - ).', 'woo-noborder-gateway'),
+                        'description' => __('By default, customers can pay through all <a href="https://noborder.company/cryptosite" target="_blank">active currencies</a> in the gate, but if you want to limit the customer to pay through one or more specific crypto currencies, you can declare the name of the crypto currencies through this variable. If you want to declare more than one currency, separate them with a dash ( - ).', 'woo-noborder-gateway'),
                         'default' => '',
                     ),
                     'order_status' => array(
@@ -165,7 +165,7 @@ function wc_gateway_noborder_init(){
                 return array('result' => 'success', 'redirect' => $order->get_checkout_payment_url(TRUE));
             }
 
-            //Add noBorder.tech Checkout items to receipt page
+            //Add noBorder.company Checkout items to receipt page
             public function noborder_checkout_receipt_page($order_id) {
                 
 				global $woocommerce;
@@ -274,7 +274,7 @@ function wc_gateway_noborder_init(){
                     // Completed
                     $note = sprintf(__('Transaction payment status: %s', 'woo-noborder-gateway'), $verify_status);
                     $note .= '<br/>';
-                    $note .= sprintf(__('noBorder.tech request id: %s', 'woo-noborder-gateway'), $verify_request_id);
+                    $note .= sprintf(__('noBorder.company request id: %s', 'woo-noborder-gateway'), $verify_request_id);
                     $order->add_order_note($note);
 
                     // Updates order's meta data after verifying the payment.
