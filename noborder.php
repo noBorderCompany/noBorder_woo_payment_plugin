@@ -63,8 +63,8 @@ function wc_gateway_noborder_init(){
 
                 $this->order_status = $this->get_option('order_status');
 
-                $this->payment_endpoint = 'https://noborder.company/action/ws/request_create';
-                $this->verify_endpoint = 'https://noborder.company/action/ws/request_status';
+                $this->payment_endpoint = 'https://noborder.company/action/ws/request/create';
+                $this->verify_endpoint = 'https://noborder.company/action/ws/request/status';
 
                 $this->success_message = $this->get_option('success_message');
                 $this->failed_message = $this->get_option('failed_message');
