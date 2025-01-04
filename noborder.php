@@ -120,13 +120,13 @@ function wc_gateway_noborder_init(){
                     'api_key' => array(
                         'title' => __('API Key', 'woo-noborder-gateway'),
                         'type' => 'text',
-                        'description' => __('You can create an API Key by going to <a href="https://noborder.company/cryptosite" target="_blank">https://noborder.company/cryptosite</a>', 'woo-noborder-gateway'),
+                        'description' => __('You can create an API Key by going to <a href="https://noborder.company/gateway" target="_blank">https://noborder.company/gateway</a>', 'woo-noborder-gateway'),
                         'default' => '',
                     ),
                     'pay_currency' => array(
                         'title' => __('Pay Currencies', 'woo-noborder-gateway'),
                         'type' => 'text',
-                        'description' => __('By default, customers can pay through all <a href="https://noborder.company/cryptosite" target="_blank">active currencies</a> in the gate, but if you want to limit the customer to pay through one or more specific crypto currencies, you can declare the name of the crypto currencies through this variable. If you want to declare more than one currency, separate them with a dash ( - ).', 'woo-noborder-gateway'),
+                        'description' => __('By default, customers can pay through all <a href="https://noborder.company/gateway" target="_blank">active currencies</a> in the gate, but if you want to limit the customer to pay through one or more specific crypto currencies, you can declare the name of the crypto currencies through this variable. If you want to declare more than one currency, separate them with a dash ( - ).', 'woo-noborder-gateway'),
                         'default' => '',
                     ),
                     'order_status' => array(
